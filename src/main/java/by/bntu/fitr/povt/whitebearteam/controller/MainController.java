@@ -16,4 +16,40 @@ public class MainController {
         response.setContentType("text/html;charset=UTF-8");
         return "index";
     }
+
+    @GetMapping(value = "categories")
+    public String categories(HttpServletRequest request, HttpServletResponse response){
+        response.setContentType("text/html;charset=UTF-8");
+        return "categories";
+    }
+
+    @GetMapping(value = "contacts")
+    public String contacts(HttpServletRequest request, HttpServletResponse response){
+        response.setContentType("text/html;charset=UTF-8");
+        return "contacts";
+    }
+
+    @GetMapping(value = "delivery")
+    public String delivery(HttpServletRequest request, HttpServletResponse response){
+        response.setContentType("text/html;charset=UTF-8");
+        return "delivery";
+    }
+
+    @GetMapping(value = "findpages")
+    public String findpages(HttpServletRequest request, HttpServletResponse response){
+        response.setContentType("text/html;charset=UTF-8");
+        return "findpages";
+    }
+
+    @GetMapping(value = "product")
+    public String product(HttpServletRequest request, HttpServletResponse response){
+        response.setContentType("text/html;charset=UTF-8");
+        return "product";
+    }
+
+    @GetMapping(value = "registration")
+    public String registration(HttpServletRequest request, HttpServletResponse response){
+        response.setContentType("text/html;charset=UTF-8");
+        return "registration";
+    }
 }
