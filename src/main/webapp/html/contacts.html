@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE = edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="keywords" content="">
+    <meta name="author" content="WhiteBearTeam">
+    <link rel="stylesheet" type="text/css" href="static/fonts/fonts.css">
+    <link rel="stylesheet" type="text/css" href="static/css/main.css">
+    <title>Страница доставки
+    </title>
+  </head>
+  <body>
+    <div class="top_block-wrap">
+      <div class="top-block">
+        <ul class="top_social-link">
+          <li><a class="top_social-link_vk" href="javascript:void(0);"></a></li>
+          <li><a class="top_social-link_fb" href="javascript:void(0);"></a></li>
+          <li><a class="top_social-link_inst" href="javascript:void(0);"></a></li>
+        </ul>
+        <div class="top_btn"><a class="btn btn_orange" href="registration.html">Регистрация</a><a class="btn btn_orange" href="javascript:void(0);">Вход</a></div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <header>
+        <div class="callback_phone">
+          <form class="callback_form">
+            <spam class="form_title">Заказать звонок</spam>
+            <input class="callback_form_one" type="text" placeholder="Ваше имя" name="name">
+            <input class="callback_form_one" type="text" placeholder="Телефон" name="phone">
+            <input class="btn btn_orange callback_form_three" type="submit" value="Отправить">
+          </form>
+        </div>
+        <div class="header_top">
+          <div class="header_logo"><a href="javascript:void(0);">WhiteBearTeam.com</a><span>ПО оборудование</span></div>
+          <div class="header_adress">
+            <div class="header_adress_top"><a class="header_phone" href="javascript:void(0);">+375 44<span>472 6669</span></a><a class="btn btn_orange" href="javascript:void(0);" onclick="showCallbackForm()">обратный звонок</a></div>
+            <div class="header_adress_bottom"><span>Минск, ул. Богдана Хмельницкого, 9</span></div>
+          </div>
+          <div class="header_basket_wrap" onclick="cart.html">
+            <div class="header_basket"><span>Корзина пуста, <br> добавьте товар.</span></div>
+          </div>
+        </div>
+        <div class="main_nav-wrap">
+          <nav class="main_nav">
+            <div class="menu">
+              <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="javascript:void(0);" onclick="showTitle(id)">Все товары</a></li>
+                <li><a href="javascript:void(0);">Новости</a></li>
+                <li><a href="delivery.html">Доставка</a></li>
+                <li><a href="javascript:void(0);">Оплата</a></li>
+                <li><a href="contacts.html">Контакты</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="top_search-wrap">
+            <input type="text" id="find-good" placeholder="Поиск по товарам">
+          </div>
+        </div>
+      </header>
+      <section class="menu_under_slider"><a href="javascript:void(0);" id="b1" onclick="showTitle(id)">Персональные <br> компьютеры</a><a href="javascript:void(0);" id="b2" onclick="showTitle(id)">Мобильные <br> телефоны</a><a href="javascript:void(0);" id="b3" onclick="showTitle(id)">Игровые <br> консоли</a></section>
+      <section class="main_content-wrap">
+        <aside>
+          <div class="aside_nav_item">
+            <spam class="title">Персональные компьютеры</spam>
+            <ul>
+              <li><a href="index.html">РАСПРОДАЖА</a></li>
+              <li><a href="index.html">НОВИНКИ</a></li>
+              <li><a href="javascript:void(0);">Офисные ПК</a></li>
+              <li><a href="javascript:void(0);">Игровые ПК</a></li>
+              <li><a href="javascript:void(0);">Ноутбуки</a></li>
+            </ul>
+          </div>
+          <div class="aside_nav_item">
+            <spam class="title">Мобильные телефоны</spam>
+            <ul>
+              <li><a href="index.html">РАСПРОДАЖА</a></li>
+              <li><a href="index.html">НОВИНКИ</a></li>
+              <li><a href="javascript:void(0);">Аndroid</a></li>
+              <li><a href="javascript:void(0);">Iphone</a></li>
+            </ul>
+          </div>
+          <div class="aside_nav_item">
+            <spam class="title">Игровые консоли</spam>
+            <ul>
+              <li><a href="index.html">РАСПРОДАЖА</a></li>
+              <li><a href="index.html">НОВИНКИ</a></li>
+              <li><a href="javascript:void(0);">Sony-PlayStation</a></li>
+              <li><a href="javascript:void(0);">X-Box</a></li>
+            </ul>
+          </div>
+          <div class="aside_nav_item aside_nav_item-brand">
+            <spam class="title">Бренды</spam>
+            <ul>
+              <li><a href="javascript:void(0);" id="a1" onclick="findBrand(id)">Apple</a></li>
+              <li><a href="javascript:void(0);" id="a2" onclick="findBrand(id)">Samsung</a></li>
+              <li><a href="javascript:void(0);" id="a3" onclick="findBrand(id)">Sony-PlayStation</a></li>
+              <li><a href="javascript:void(0);" id="a4" onclick="findBrand(id)">X-Box</a></li>
+              <li><a href="javascript:void(0);" id="a5" onclick="findBrand(id)">Asus</a></li>
+              <li><a href="javascript:void(0);" id="a6" onclick="findBrand(id)">Nokia</a></li>
+              <li><a href="javascript:void(0);" id="a7" onclick="findBrand(id)">ZTE</a></li>
+              <li><a href="javascript:void(0);" id="a8" onclick="findBrand(id)">Lenovo</a></li>
+              <li><a href="javascript:void(0);" id="a9" onclick="findBrand(id)">BQM</a></li>
+              <li><a href="javascript:void(0);" id="a10" onclick="findBrand(id)">Huawei</a></li>
+              <li><a href="javascript:void(0);" id="a11" onclick="findBrand(id)">HP</a></li>
+              <li><a href="javascript:void(0);" id="a12" onclick="findBrand(id)">Xiaomi</a></li>
+              <li><a href="javascript:void(0);" id="a13" onclick="findBrand(id)">Z-Tech</a></li>
+              <li><a href="javascript:void(0);" id="a14" onclick="findBrand(id)">Haff</a></li>
+            </ul>
+          </div>
+        </aside>
+        <main>
+          <div class="breadcrums"><a href="index.html">Главная</a><span>Персональные компьютеры</span></div>
+          <h1>Контакты</h1>
+          <div class="contacts_info">
+            <div class="contacts_info-left">
+              <div class="contacts_info-item"><span class="contacts_info-icon contacts_info-icon-map"></span><span>ул. Богдана Хмельницкого, 9</span></div>
+              <div class="contacts_info-item"><span class="contacts_info-icon contacts_info-icon-phone"></span><span>+375 44 472 6669</span></div>
+              <div class="contacts_info-item"><span class="contacts_info-icon contacts_info-icon-letter"></span><span>nk03121998@mail.ru</span></div>
+              <div class="contacts_info-item"><span class="contacts_info-icon contacts_info-icon-watch"></span><span>c 9:00 до 18:00</span></div>
+            </div>
+            <div class="contacts_info-right">
+              <form class="contacts_form">
+                <spam class="form_title">Отправить сообщение</spam>
+                <input type="text" placeholder="Ваше имя" name="name">
+                <input type="text" placeholder="Email" name="mail">
+                <input type="text" placeholder="Телефон" name="phone">
+                <textarea placeholder="Сообщение" name="message"></textarea>
+                <input class="btn btn_orange" type="submit" value="Отправить">
+              </form>
+            </div>
+          </div><script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ae5cc8c4a3e600c4a4d8e5807142e35c63e6c757afc97dc6eead3ec1830bd1584&amp;width=100%25&amp;height=582&amp;lang=ru_RU&amp;scroll=true"></script>
+        </main>
+      </section>
+      <div id="toTop"></div>
+    </div>
+    <footer>
+      <div class="footer_content">
+        <div class="footer_content-left"><a class="footer_logo" href="javascript:void(0);">WhiteBearTeam.com</a><span class="footer_adress">Минск, Нул. Богдана Хмельницкого, 9</span><a class="footer_phone" href="tel:+375444726669">+375 44 472 6669</a>
+          <ul class="footer_social">
+            <li><a class="footer_social-link_vk" href="javascript:void(0);"></a></li>
+            <li><a class="footer_social-link_fb" href="javascript:void(0);"></a></li>
+            <li><a class="footer_social-link_inst" href="javascript:void(0);"></a></li>
+          </ul><span>© 2018 WhiteBearTeam</span>
+        </div>
+        <div class="footer_content-right">
+          <nav class="footer_nav">
+            <ul>
+              <li><a href="javascript:void(0);">О проекте</a></li>
+              <li><a href="javascript:void(0);">Акции</a></li>
+              <li><a href="javascript:void(0);">Новости</a></li>
+              <li><a href="javascript:void(0);">Доставка</a></li>
+              <li><a href="javascript:void(0);">Оплата</a></li>
+              <li><a href="javascript:void(0);">О производители</a></li>
+              <li><a href="javascript:void(0);">Контакты</a></li>
+            </ul>
+          </nav><span class="footer_text">Пройденный путь и есть награда</span><span class="footer_text_a">Стив Джобс</span>
+        </div>
+      </div>
+    </footer>
+    <script src="static/js/libs.min.js"></script>
+    <script src="static/js/main.js"></script>
+    <script src="static/js/cart.js"></script>
+    <script src="static/js/login.js"></script>
+    <script src="static/js/dop.js"></script>
+  </body>
+</html>

@@ -1,0 +1,54 @@
+@font-face {
+  font-family: 'good_vibes_proregular';
+  src: url('../fonts/good_vibes_proregular.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'pfdindisplaypro-light';
+  src: url('../fonts/pfdindisplaypro-light.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'pfdindisplaypro-bold';
+  src: url('../fonts/pfdindisplaypro-bold.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'pfdindisplaypro-reg';
+  src: url('../fonts/pfdindisplaypro-reg.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'pt_serifbold_italic';
+  src: url('../fonts/pt_serifbold_italic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'pt_serifitalic';
+  src: url('../fonts/pt_serifitalic.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'jokerman';
+  src: url('../fonts/jokerman.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'slider';
+  src: url('../fonts/slider.ttf') format('truetype');
+  font-style: normal;
+  font-weight: normal;
+}
