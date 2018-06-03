@@ -17,7 +17,7 @@ public class ProductMapper implements RowMapper<Product> {
         p.setBrand(rs.getString("brand"));
         p.setCountry(rs.getString("country"));
         p.setArticul(rs.getString("articul"));
-        p.setType(rs.getString("type"));
+        p.setType(rs.getString("productType"));
         return p;
     }
 }

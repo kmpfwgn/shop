@@ -1,6 +1,7 @@
 package by.bntu.fitr.povt.whitebearteam.dao;
 
 import by.bntu.fitr.povt.whitebearteam.entity.Product;
+import by.bntu.fitr.povt.whitebearteam.mapper.ProductMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -14,22 +15,31 @@ public class ProductDAOImpl implements ProductDAO{
     public JdbcTemplate jdbcTemplate;
 
     public void save(Product product) {
-
+        String sql = "insert into product (name, cost, image, description, brand, country, articul, productType) " +
+                "values (?, ?, ?, ?, ?, ?, ?, ?)";
+        jdbcTemplate.update(sql, product.getName(), product.getCost(), product.getImage(), product.getDescription(),
+                product.getBrand(), product.getCountry(), product.getArticul(), product.getType());
     }
 
-    public Product getById(int id) {
-        return null;
+    public Product getByArticul(String articul) {
+        String sql = "select * from product where articul = ?";
+        return jdbcTemplate.queryForObject(sql, new ProductMapper(), articul);
     }
 
     public List<Product> findAll() {
-        return null;
+        String sql = "select * from product";
+        return jdbcTemplate.query(sql, new ProductMapper());
     }
 
     public void update(Product product) {
-
+        String sql = "update product set name = ?, cost = ?, image = ?, description = ?, brand = ?, country = ?, " +
+                "productType = ? where articul = ?";
+        jdbcTemplate.update(sql, product.getName(), product.getCost(), product.getImage(), product.getDescription(),
+                product.getBrand(), product.getCountry(), product.getType(), product.getArticul());
     }
 
-    public void delete(int id) {
-
+    public void delete(String articul){
+        String sql = "delete from product where articul = ?";
+        jdbcTemplate.update(sql, articul);
     }
 }

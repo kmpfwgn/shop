@@ -8,11 +8,11 @@ public interface ProductDAO {
 
     void save(Product product);
 
-    Product getById(int id);
+    Product getByArticul(String articul);
 
     List<Product> findAll();
 
     void update(Product product);
 
-    void delete(int id);
+    void delete(String id);
 }

@@ -21,15 +21,15 @@ public class ProductServiceImpl implements ProductService {
         return productDAO.findAll();
     }
 
-    public Product getById(int id) {
-        return productDAO.getById(id);
+    public Product getByArticul(String articul) {
+        return productDAO.getByArticul(articul);
     }
 
     public void update(Product product) {
         productDAO.update(product);
     }
 
-    public void delete(int id) {
-        productDAO.delete(id);
+    public void delete(String articul) {
+        productDAO.delete(articul);
     }
 }

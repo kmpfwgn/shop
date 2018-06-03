@@ -10,9 +10,9 @@ public interface ProductService {
 
     List<Product> findAll();
 
-    Product getById(int id);
+    Product getByArticul(String articul);
 
     void update(Product product);
 
-    void delete(int id);
+    void delete(String articul);
 }
