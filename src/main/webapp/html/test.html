@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test page</title>
+    <script type="text/javascript" src="/static/js/jquery-3.3.1.js"></script>
+    <script src="/static/js/test.js" type="text/javascript"></script>
+</head>
+<body>
+
+<h3>Add product</h3>
+<br>
+
+<div>
+    <form style="margin:20px 20px 20px 20px" id="productForm">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter Name" />
+        </div>
+        <div class="form-group">
+            <label for="cost">Cost</label>
+            <input type="text" id="cost" placeholder="Enter cost" />
+        </div>
+        <div class="form-group">
+            <label for="image">Image</label>
+            <input type="text" id="image" placeholder="Enter Image Path" />
+        </div>
+        <div class="form-group">
+            <label for="description">Description</label>
+            <input type="text" id="description" placeholder="Enter description" />
+        </div>
+        <div class="form-group">
+            <label for="brand">Brand</label>
+            <input type="text" id="brand" placeholder="Enter Brand" />
+        </div>
+        <div class="form-group">
+            <label for="country">Country</label>
+            <input type="text" id="country" placeholder="Enter Country" />
+        </div>
+        <div class="form-group">
+            <label for="articul">Articul</label>
+            <input type="text" id="articul" placeholder="Enter Articul" />
+        </div>
+        <div class="form-group">
+            <label for="type">Type</label>
+            <input type="text" id="type" placeholder="Enter Type" />
+        </div>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+<button id="update-product">Update</button>
+
+<button id="get-products">Get All</button>
+
+<div id="products">
+    <ul id="products-list"></ul>
+</div>
+
+<form id="byIdForm">
+    <input type="text" id="getByArticul" placeholder="Articul">
+    <button type="submit">Get</button>
+</form>
+
+<div id="productById">
+    <ul id="productById-list"></ul>
+</div>
+
+</body>
+</html>

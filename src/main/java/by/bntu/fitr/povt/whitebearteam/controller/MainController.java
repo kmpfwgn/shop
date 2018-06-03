@@ -52,4 +52,10 @@ public class MainController {
         response.setContentType("text/html;charset=UTF-8");
         return "registration";
     }
+
+    @GetMapping(value = "test")
+    public String test(HttpServletRequest request, HttpServletResponse response){
+        response.setContentType("text/html;charset=UTF-8");
+        return "test";
+    }
 }
