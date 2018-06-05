@@ -1,6 +1,8 @@
 $(document).ready(function () {
 
     $('#productForm').submit(function (event) {
+        event.preventDefault();
+
         var formData = {
             name: $('#name').val(),
             cost: $('#cost').val(),

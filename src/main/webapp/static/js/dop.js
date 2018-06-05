@@ -38,15 +38,15 @@ function editTitle(t) {
 function beforeS(callback) {
   var t=0;
   var mas2 = [];
-  $.getJSON('goods.json', function (data) {
-    for (var key in data) {
-      mas2[t] = data[key];
-      t++;
-    }
-    loadSale(mas2);
-    loadNew(mas2);
-    callback();
-  });
+  // $.getJSON('goods.json', function (data) {
+  //   for (var key in data) {
+  //     mas2[t] = data[key];
+  //     t++;
+  //   }
+  //   loadSale(mas2);
+  //   loadNew(mas2);
+  //   callback();
+  // });
 }
 
 function loadSale(data) {

@@ -16,7 +16,7 @@ $(document).ready((function () {
   });
 
   $('.menu a').each(function() {
-    if ('http://localhost:3000/'+$(this).attr('href') == window.location.href)
+    if ('http://localhost:8080/'+$(this).attr('href') == window.location.href)
     {
       $(this).addClass('active');
     }
@@ -31,23 +31,8 @@ $(document).ready((function () {
 
 function showTitle(id)
 {
-  //   var xmlhttp;
-  //   try {
-  //     xmlhttp = new ActiveXObject("Msxml2.XMLHTTP");
-  //   } catch (e) {
-  //     try {
-  //       xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-  //     } catch (E) {
-  //       xmlhttp = false;
-  //     }
-  //   }
-  //   if (!xmlhttp && typeof XMLHttpRequest!='undefined') {
-  //     xmlhttp = new XMLHttpRequest();
-  //   }
-  // xmlhttp.open("GET","http://localhost:9080/server/",true); // false - используем СИНХРОННУЮ передачу
-  // xmlhttp.send();
   localStorage.setItem('myid',JSON.stringify(id));
-  location('categories.html')
+  location ='categories.html';
 }
 
 function showCallbackForm() {
@@ -56,21 +41,28 @@ function showCallbackForm() {
 
 function beforeStart(callback) {
   var t=0;
-  $.getJSON('goods.json', function (data) {
-  for (var key in data) {
-    mas[t] = data[key];
-    t++;
-  }
-    localStorage.setItem('mas1',JSON.stringify(mas));
-    mas = JSON.parse(localStorage.getItem('mas1'));
-    size = mas.length;
-    callback();
-  });
+  // $.getJSON('goods.json', function (data) {
+  // for (var key in data) {
+  //   mas[t] = data[key];
+  //   t++;
+  // }
+  //   localStorage.setItem('mas1',JSON.stringify(mas));
+  //   mas = JSON.parse(localStorage.getItem('mas1'));
+  //   size = mas.length;
+  //   callback();
+  // });
 
 }
 
 function loadsgoods() {
-    pages(mas.length);
+    $.ajax({
+        type: 'GET',
+        url: window.location.origin + '/api/product/count',
+        success: function (result) {
+            pages(result);
+        }
+    });
+
     open_pg(1);
 }
 
@@ -98,7 +90,7 @@ function minus(e) {
 
 function open_pg(el) {
   var i;
-  console.log(JSON.parse(localStorage.getItem('mas1')));
+  // console.log(JSON.parse(localStorage.getItem('mas1')));
 
   $('.product_pagination a').each(function() {
     $(this).removeClass('active');
@@ -124,18 +116,23 @@ function open_pg(el) {
 
   var b = i+6;
 
-  var mas1 = [];
-
   var ele = document.getElementById('mytitle_1');
   if(ele.innerText == "Персональные компьютеры" || ele.innerText == "Мобильные телефоны" ||
     ele.innerText == "Игровые консоли"){
     var arr = JSON.parse(localStorage.getItem('filter'));
-    mas1 = arr.slice(i,b);
+    // mas1 = arr.slice(i,b);
     pages(arr.length);
   }
-  else mas1 = mas.slice(i,b);
 
-  load(mas1);
+  $.ajax({
+      type: 'GET',
+      url: window.location.origin + '/api/product/range?from=' + i + '&count=' + b,
+      success: function (result) {
+          load(result);
+          localStorage.setItem('currentGoods',JSON.stringify(result))
+      }
+  })
+
 }
 
 
@@ -163,6 +160,7 @@ function load(data) {
 
 
 function addToCart() {
+  var goods = JSON.parse(localStorage.getItem('currentGoods'));
   var a = parseInt($(this).attr('data-art'))
   var art = parseInt($(this).attr('data-art'))+parseInt((parseInt(st)-1)*6);
   var col =0;
@@ -177,7 +175,7 @@ function addToCart() {
          col = arg1+arg2;
        }
     }
-  cart[art]=col;
+  cart[goods[art].articul]=col;
   localStorage.setItem('cart',JSON.stringify(cart));
   showMiniCart();
 }
@@ -242,6 +240,7 @@ function brandSort() {
 }
 
 function pages(size) {
+
   var col;
   col = Math.ceil(size/6);
   pagesCol = col;
