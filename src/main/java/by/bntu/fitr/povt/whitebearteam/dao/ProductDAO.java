@@ -15,4 +15,6 @@ public interface ProductDAO {
     void update(Product product);
 
     void delete(String id);
+
+    int getCount();
 }

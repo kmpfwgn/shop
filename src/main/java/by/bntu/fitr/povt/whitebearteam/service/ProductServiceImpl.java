@@ -32,4 +32,9 @@ public class ProductServiceImpl implements ProductService {
     public void delete(String articul) {
         productDAO.delete(articul);
     }
+
+    @Override
+    public int getCount() {
+        return productDAO.getCount();
+    }
 }

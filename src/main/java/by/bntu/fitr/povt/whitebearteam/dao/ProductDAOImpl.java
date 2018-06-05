@@ -42,4 +42,10 @@ public class ProductDAOImpl implements ProductDAO{
         String sql = "delete from product where articul = ?";
         jdbcTemplate.update(sql, articul);
     }
+
+    @Override
+    public int getCount() {
+        String sql = "select count(*) from product";
+        return jdbcTemplate.queryForObject(sql, new Object[] {}, Integer.class);
+    }
 }

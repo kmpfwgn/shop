@@ -38,4 +38,9 @@ public class ProductController {
     public void updateProduct(@RequestBody Product product){
         productService.update(product);
     }
+
+    @RequestMapping(value = "/count", method = RequestMethod.GET)
+    public Integer getCount(){
+        return productService.getCount();
+    }
 }
