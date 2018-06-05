@@ -53,6 +53,12 @@ public class MainController {
         return "registration";
     }
 
+    @GetMapping(value = "cart")
+    public String cart(HttpServletRequest request, HttpServletResponse response){
+        response.setContentType("text/html;charset=UTF-8");
+        return "cart";
+    }
+
     @GetMapping(value = "test")
     public String test(HttpServletRequest request, HttpServletResponse response){
         response.setContentType("text/html;charset=UTF-8");
