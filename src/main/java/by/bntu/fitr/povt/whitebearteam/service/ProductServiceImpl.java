@@ -37,4 +37,9 @@ public class ProductServiceImpl implements ProductService {
     public int getCount() {
         return productDAO.getCount();
     }
+
+    @Override
+    public List<Product> getInRange(String from, String count) {
+        return productDAO.getInRange(Integer.parseInt(from), Integer.parseInt(count));
+    }
 }

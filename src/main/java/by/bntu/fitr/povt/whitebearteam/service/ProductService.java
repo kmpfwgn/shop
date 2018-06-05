@@ -17,4 +17,6 @@ public interface ProductService {
     void delete(String articul);
 
     int getCount();
+
+    List<Product> getInRange(String from, String count);
 }

@@ -48,4 +48,10 @@ public class ProductDAOImpl implements ProductDAO{
         String sql = "select count(*) from product";
         return jdbcTemplate.queryForObject(sql, new Object[] {}, Integer.class);
     }
+
+    @Override
+    public List<Product> getInRange(int from, int count) {
+        String sql = "select * from product limit ?, ?";
+        return jdbcTemplate.query(sql, new ProductMapper(), from, count);
+    }
 }

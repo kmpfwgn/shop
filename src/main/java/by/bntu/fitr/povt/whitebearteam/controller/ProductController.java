@@ -5,6 +5,8 @@ import by.bntu.fitr.povt.whitebearteam.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import java.util.List;
 
 @RestController
@@ -42,5 +44,12 @@ public class ProductController {
     @RequestMapping(value = "/count", method = RequestMethod.GET)
     public Integer getCount(){
         return productService.getCount();
+    }
+
+    @RequestMapping(value = "/range", method = RequestMethod.GET)
+    public List<Product> getInRange(HttpServletRequest request, HttpServletResponse response){
+        String from = request.getParameter("from");
+        String count = request.getParameter("count");
+        return productService.getInRange(from, count);
     }
 }

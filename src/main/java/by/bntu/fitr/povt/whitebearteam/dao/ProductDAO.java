@@ -17,4 +17,6 @@ public interface ProductDAO {
     void delete(String id);
 
     int getCount();
+
+    List<Product> getInRange(int from, int count);
 }
